@@ -1,0 +1,13 @@
+# Sample Docksmith application demonstrating all features
+
+FROM alpine:3.18
+
+COPY app.py /app/
+
+WORKDIR /app
+
+ENV MESSAGE="Hello from Docksmith!"
+
+RUN echo "Build complete - application ready"
+
+CMD ["python3", "app.py"]
